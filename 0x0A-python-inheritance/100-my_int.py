@@ -1,20 +1,17 @@
 #!/usr/bin/python3
+'''task 12 module'''
 
 
 class MyInt(int):
-    """Contrary rebel class of int"""
+    '''weird class'''
+    def __eq__(self, other):
+        '''== method'''
+        if int.__eq__(self, other):
+            return False
+        return True
 
-    def __eq__(self, n2):
-        """Returns the opposite of __eq__"""
-        return super().__ne__(n2)
-
-    def __ne__(self, n2):
-        """Returns the opposite of __ne__"""
-        return super().__eq__(n2)
-
-
-if __name__ == '__main__':
-    my_i = MyInt(3)
-    print(my_i)
-    print(my_i == 3)
-    print(my_i != 3)
+    def __ne__(self, other):
+        '''!= method'''
+        if int.__ne__(self, other):
+            return False
+        return True

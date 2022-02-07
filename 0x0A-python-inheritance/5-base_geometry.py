@@ -1,14 +1,9 @@
 #!/usr/bin/python3
+'''module for task 5'''
 
 
 class BaseGeometry:
-    """BaseGeometry empty class"""
-    pass
-
-
-if __name__ == '__main__':
-    bg = BaseGeometry()
-
-    print(bg)
-    print(dir(bg))
-    print(dir(BaseGeometry))
+    '''empty class'''
+    def __init__(self):
+        '''empty init'''
+        pass
