@@ -1,12 +1,19 @@
 #!/usr/bin/node
-let args = process.argv.slice(2).map((x) => {
-  return parseInt(x);
-});
 
-if (args.length <= 1) {
+if (process.argv[2] === undefined || process.argv[3] === undefined) {
   console.log(0);
 } else {
-  console.log(args.sort((a, b) => {
-    return b - a;
-  })[1]);
+  let fmax = parseInt(process.argv[2]);
+  let nmax = parseInt(process.argv[3]);
+  process.argv.forEach((val, index) => {
+    if (index > 1) {
+      if (fmax < parseInt(val)) {
+        nmax = fmax;
+        fmax = parseInt(val);
+      } else if (parseInt(val) < fmax && parseInt(val) >= nmax) {
+        nmax = parseInt(val);
+      }
+    }
+  });
+  console.log(nmax);
 }
