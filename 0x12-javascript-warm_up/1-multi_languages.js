@@ -1,7 +1,7 @@
 #!/usr/bin/node
-let i = 0;
-const arr = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-
-for (i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
+const cMessage = 'C is fun';
+const pythonMessage = 'Python is cool';
+const jsMessage = 'JavaScript is amazing';
+console.log(cMessage);
+console.log(pythonMessage);
+console.log(jsMessage);
