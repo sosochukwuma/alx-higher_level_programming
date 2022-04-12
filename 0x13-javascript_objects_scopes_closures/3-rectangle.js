@@ -1,22 +1,17 @@
 #!/usr/bin/node
-
+// Checked Rectangle Class with print()
 class Rectangle {
   constructor (w, h) {
-    if (w > 0 && h > 0) {
+    if ((w = parseInt(w)) && w > 0 &&
+        (h = parseInt(h)) && h > 0) {
       this.width = w;
       this.height = h;
     }
   }
-  print () {
-    let rows, columns;
 
-    for (rows = 0; rows < this.height; rows++) {
-      let str = '';
-      for (columns = 0; columns < this.width; columns++) {
-        str += 'X';
-      }
-      console.log(str);
-    }
+  print () {
+    console.log(('X'.repeat(this.width) + '\n').repeat(this.height).split('')
+      .slice(0, -1).join(''));
   }
 }
 
